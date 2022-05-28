@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands;
 
-use App\Models\Member;
+use App\Models\User;
 use App\Models\Rol;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Hash;
@@ -65,7 +65,7 @@ class Installer extends Command
     }
 
     private function createUserSuperAdmin(){
-        return Member::create([
+        return User::create([
             'name' => 'Marks Admin',
             'email' => 'markuspiedra10@gmail.com',
             'password' => Hash::make('Marks_Dev-Blog@9855&43')
